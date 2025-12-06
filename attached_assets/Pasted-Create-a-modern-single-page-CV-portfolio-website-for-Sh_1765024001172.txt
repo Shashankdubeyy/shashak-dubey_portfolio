@@ -1,0 +1,132 @@
+Create a modern, single-page CV/portfolio website for "Shashank Dubey" (B.Tech CSE - Cybersecurity). Build with React + Vite, Tailwind CSS, GSAP (including ScrollTrigger) for advanced animations and page transitions; include Framer Motion for small UI transitions. The site must be production-ready, responsive (mobile-first), accessible, and SEO-friendly.
+
+FEATURE UPDATES (new / must-have)
+1. Loader:
+   - Full-page loader that shows a numeric loading percentage in bold at the bottom-left corner (e.g., "45%") while the app bundles/assets load.
+   - Show an animated progress bar and subtle micro-animations; percent text must be large, bold, and anchored bottom-left on all screen sizes.
+   - Loader must smoothly progress to 100% and then animate out (fade+slide) revealing the site.
+   - Fallback: if an asset fails, show message and a Retry button.
+
+2. Page transitions:
+   - Implement site-wide route/section transitions using GSAP: a full-screen overlay that animates in (scaleY from 0 to 1) on navigation, and out on complete.
+   - Smooth crossfade for content + staggered reveal of section elements (title → subtitle → cards).
+   - Mobile: replace overlay with subtle fade/slide to conserve resources.
+
+3. GitHub button:
+   - Prominent GitHub button in header (icon + text) linking to `https://github.com/shashankdubey`.
+   - Secondary GitHub CTA near Projects section and on each project card ("View Code").
+   - Option to fetch 4 latest public repos via GitHub API (instructions + caching notice in README).
+
+STRUCTURE & SECTIONS
+- Sticky Header (left-aligned logo or name, center nav, right: theme toggle + GitHub button)
+- Hero (parallax background, headline, 1-line summary, primary CTA "View Projects", secondary CTA "Download CV")
+- About Me (short bio copy included below)
+- Education (list entries; sample entries included)
+- Skills (grouped with proficiency bars)
+- Projects (card grid; animated reveal with GitHub & Live Demo buttons)
+- Certifications
+- Interests & Hobbies
+- Contact (mailto + contact form fallback)
+- Footer (download resume + social links)
+
+ABOUT ME — (copy to include)
+Shashank Dubey — I’m a final-year B.Tech student in Computer Science (specializing in Cybersecurity) based in Bhopal. I’m passionate about building secure, scalable web applications and learning practical defensive and offensive security techniques. I enjoy turning ideas into working products — from frontend UI to backend services — and I actively contribute to projects that prioritize performance, accessibility and robustness. I’m seeking internships and junior roles where I can grow as an engineer and solve real-world problems.
+
+EDUCATION — (sample content; adjust years/colleges)
+- B.Tech, Computer Science & Engineering (Cybersecurity focus) — [Your College Name], Expected Graduation: 2026
+- Diploma in Computer Science / Polytechnic — [Institution Name], Year
+
+SKILLS — (grouped + sample proficiencies)
+Frontend:
+ - React (Advanced)
+ - Tailwind CSS (Advanced)
+ - HTML5, CSS3 (Advanced)
+ - Framer Motion / GSAP (Intermediate)
+
+Backend:
+ - Node.js, Express (Intermediate)
+ - REST APIs, JWT auth (Intermediate)
+ - Firebase (Realtime features) (Intermediate)
+
+Databases & DevOps:
+ - MongoDB (Intermediate)
+ - Git, GitHub (Advanced)
+ - Vercel / Netlify (Deployment) (Intermediate)
+
+Security & Tools:
+ - Basic Web Security (OWASP fundamentals) (Intermediate)
+ - Basic CTF skills: web, crypto, recon (Beginner-Intermediate)
+ - Postman, Insomnia, Chrome DevTools
+
+Languages:
+ - JavaScript / TypeScript
+ - Python (for scripts & quick tooling)
+
+PROJECT EXAMPLES — include these two from resume
+1. Employee Management System
+   - Tech: React, Node, Express, MongoDB
+   - Highlights: full CRUD, role-based auth (JWT), optimized endpoints, deployed demo placeholder
+   - Buttons: "View Code" (GitHub) + "Live Demo" (placeholder)
+
+2. Online Task Management
+   - Tech: React, Firebase, Tailwind
+   - Highlights: real-time updates, user auth, responsive UI
+   - Buttons: "View Code" + "Live Demo"
+
+CERTIFICATIONS — (sample extracted from resume)
+- Front-End Web Development (SHERYIANS CODING SCHOOL)
+- React.js Certification (SHERYIANS CODING SCHOOL)
+- Back-End Development / Full-Stack Certification (SHERYIANS CODING SCHOOL)
+
+INTERESTS & HOBBIES — (safe, professional, portfolio-friendly)
+- Competitive coding and algorithm practice
+- Cybersecurity CTFs and hands-on labs
+- Reading tech blogs and experimenting with side projects
+- Music & casual photography (creative outlet)
+
+UX & MOTION REQUIREMENTS (details for Replit AI)
+- Loader: implement in a central `Loader` component; use GSAP or requestAnimationFrame to animate percent. Display percent text bottom-left with `position: fixed; left: 1rem; bottom: 1rem; font-weight: 700; font-size: clamp(14px, 2vw, 20px);`.
+- Page transition overlay: `TransitionOverlay` component that animates with GSAP when nav actions trigger.
+- Section reveals: use GSAP ScrollTrigger for headings, cards and skill bars (staggered).
+- Buttons: accessible focus states, ripple + scale on hover, shallow shadow.
+- Project card hover: 3D tilt + subtle info slide-up on desktop; accessible tap states on mobile.
+- Animated SVG section separators and small particle/parallax layer in hero.
+
+THEMING & ACCESSIBILITY
+- Provide light/dark toggle; default to dark theme.
+- Semantic HTML, aria labels, keyboard navigation, visible focus outlines.
+- Images lazy-loaded; critical CSS inlined; code-splitting for heavy libs.
+
+GITHUB & RESUME
+- `public/resume.pdf` added and linked to a centered "Download CV" button: `<a href="/resume.pdf" download>Download CV</a>`.
+- GitHub header button linking to `https://github.com/shashankdubey`. Provide README instructions to replace with actual username.
+- If GitHub API is used, provide instructions and a small caching example in README to avoid rate limits.
+
+FILE & REPO STRUCTURE (must create)
+- `public/resume.pdf`
+- `src/components/Header.jsx`, `Hero.jsx`, `Loader.jsx`, `TransitionOverlay.jsx`, `ProjectCard.jsx`, `Skills.jsx`, `Education.jsx`, `About.jsx`, `ContactForm.jsx`, `Footer.jsx`
+- `src/lib/gsap.js`
+- `tailwind.config.js`, `postcss.config.js`, `package.json`
+- `README.md` with deployment + replacement instructions (how to set GitHub username, how to add live demo links, how to toggle light/dark).
+
+DEVELOPER NOTES & OUTPUT CHECKLIST
+- The site must run with `npm install` and `npm run dev`.
+- Loader percent must reflect actual asset load progress (bundle + images). If fine-grained asset progress isn't available, simulate with pre-defined progress steps while ensuring final transition only after `window.onload` or equivalent.
+- Provide default placeholder images and instructions for replacing with screenshots/GIFs.
+- Provide clear comments in code where to change personal links (GitHub, resume).
+- Ensure the site reads only Shashank Dubey info — do not include or copy any information about Parth or other users.
+- Provide a short README section showing how to change the GitHub URL and resume file path.
+
+ASSETS & COPY (PLACEHOLDERS)
+- Full name: Shashank Dubey
+- Email: shashankdub789@gmail.com
+- Phone: +91 8349159401
+- Location: Bhopal, Madhya Pradesh, India
+- GitHub (header button): https://github.com/shashankdubey
+- Resume download path: /resume.pdf
+
+OUTPUT
+- Generate a complete React project with components, Tailwind styles, GSAP animations, loader, page transitions, README, and a working demo build configuration.
+- Make sure site is modular, accessible, and ready for deployment (Vercel / Netlify / Replit).
+
+End of prompt.
