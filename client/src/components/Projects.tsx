@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import VanillaTilt from "vanilla-tilt";
-import { Github, ExternalLink, Users, CheckSquare } from "lucide-react";
+import { Github, ExternalLink, Users, CheckSquare, Car, PiggyBank } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
@@ -41,6 +41,38 @@ const projects = [
     github: "https://github.com/shashankdubey",
     demo: "#",
     gradient: "from-cyan-600 to-blue-600",
+  },
+  {
+    title: "BankStact Pro",
+    description:
+      "BankStack Pro is a secure full-stack web application, enterprise-level reliability, built with scalable REST APIs, strong backend validation and best security pratices. ",
+    tech: ["React.js", "Firebase", "Tailwind CSS","REST APIs"],
+    features: [
+      "Designed to handle end-to-end banking operation",
+      "Perform essential banking task in a morden UI",
+      "it features robust user authetication(signup/login)",
+      "Responsive and intuitive interface",
+    ],
+    icon: PiggyBank,
+    github: "https://github.com/shashankdubey",
+    demo: "#",
+    gradient: "from-cyan-600 to-blue-600",
+  },
+  {
+    title: "GetSET GO!",
+    description:
+      "GetSET Go! streamlined UI that lets user book rides in seconds with minimal friction.",
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT"],
+    features: [
+      "Optimized Ride Booking Flow",
+      "Live Trip Monitoring ",
+      "Enterprise-Grade Authentication ",
+      "End-to-End Payment Support",
+    ],
+    icon: Car,
+    github: "https://github.com/shashankdubey",
+    demo: "#",
+    gradient: "from-violet-600 to-purple-600",
   },
 ];
 
