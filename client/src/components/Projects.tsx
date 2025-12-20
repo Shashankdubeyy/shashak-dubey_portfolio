@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
-    title: "Employee Management System",
+    title: "Employee-Manager-Pro",
     description:
       "Full-stack system to efficiently handle employee data with role-based authentication and secure access control.",
     tech: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT"],
@@ -27,7 +27,7 @@ const projects = [
     gradient: "from-violet-600 to-purple-600",
   },
   {
-    title: "Online Task Management",
+    title: "Task-Flow-Pro",
     description:
       "Dynamic task management application with real-time updates and priority-based task organization.",
     tech: ["React.js", "Firebase", "Tailwind CSS"],
@@ -43,7 +43,7 @@ const projects = [
     gradient: "from-cyan-600 to-blue-600",
   },
   {
-    title: "BankStact Pro",
+    title: "BankStack Pro",
     description:
       "BankStack Pro is a secure full-stack web application, enterprise-level reliability, built with scalable REST APIs, strong backend validation and best security pratices. ",
     tech: ["React.js", "Firebase", "Tailwind CSS","REST APIs"],
@@ -59,7 +59,7 @@ const projects = [
     gradient: "from-cyan-600 to-blue-600",
   },
   {
-    title: "GetSET GO!",
+    title: "Ready GO!",
     description:
       "GetSET Go! streamlined UI that lets user book rides in seconds with minimal friction.",
     tech: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT"],
