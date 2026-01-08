@@ -167,7 +167,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+     @apply border-gray-300;
   }
 
   html {
@@ -175,7 +175,7 @@
   }
 
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+  @apply font-sans antialiased bg-white text-black;
   }
 
   ::selection {
@@ -188,7 +188,7 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: hsl(var(--background));
+     background: white;
   }
 
   ::-webkit-scrollbar-thumb {

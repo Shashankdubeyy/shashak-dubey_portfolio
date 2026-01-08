@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
+  "homepage": "https://shashankdubeydev.in",
   "scripts": {
     "dev": "NODE_ENV=development tsx server/index.ts",
     "client:build": "cd client && npm run build",
-  "deploy": "npm run client:build && gh-pages -d client/dist",
+    "deploy": "npm run client:build && gh-pages -d client/dist",
     "build": "tsx script/build.ts",
     "start": "NODE_ENV=production node dist/index.cjs",
     "check": "tsc",
