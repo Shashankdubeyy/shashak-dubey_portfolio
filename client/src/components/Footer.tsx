@@ -2,7 +2,8 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { Github, Linkedin, Mail, Download, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoImage from "@assets/Asset_4@4x-8_1765023975945.png";
+import logoImage from "@/assets/logo.png";
+
 
 const socialLinks = [
   {

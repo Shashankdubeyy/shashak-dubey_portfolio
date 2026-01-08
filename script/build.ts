@@ -33,10 +33,18 @@ const allowlist = [
 ];
 
 async function buildAll() {
-  await rm("dist", { recursive: true, force: true });
+  await rm("client/dist", { recursive: true, force: true });
 
   console.log("building client...");
-  await viteBuild();
+ await viteBuild({
+  root: "client",                         // ⭐ REQUIRED
+  configFile: "client/vite.config.ts",
+  build: {
+    outDir: "dist",                       // ⭐ NOT client/dist
+    emptyOutDir: true,
+  },
+});
+
 
   console.log("building server...");
   const pkg = JSON.parse(await readFile("package.json", "utf-8"));
@@ -51,7 +59,8 @@ async function buildAll() {
     platform: "node",
     bundle: true,
     format: "cjs",
-    outfile: "dist/index.cjs",
+   outfile: "server/dist/index.cjs",
+
     define: {
       "process.env.NODE_ENV": '"production"',
     },
